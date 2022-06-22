@@ -1,0 +1,21 @@
+article>div>input{
+    display: block;
+    float:left;
+}
+
+article>div>input:nth-child(1){
+    width: 116.36px;
+}
+article>div>input:nth-child(2){
+    width: 115.7px;
+}
+article>div>input:nth-child(3){
+    width: 233.6px;
+}
+article>div>input:nth-child(4){
+    width: 130px;
+}
+
+article>div>button{
+    margin-left:1.5px;
+}

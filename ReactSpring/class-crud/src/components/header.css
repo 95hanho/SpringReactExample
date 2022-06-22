@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+header{
+    height: 50px;
+}
+
+#facebookBtn>a>div{
+    background-image: url('../images/facebook.png');
+    background-size: cover;
+    border-radius: 15%;
+}
+#instaBtn>a>div{
+    background-image: url('../images/instagram.png');
+    background-size: cover;
+}
+#facebookBtn>a>div,
+#instaBtn>a>div{
+	width:35px;
+	height:35px;
+}
+.snsLink{
+	margin:5px;
+	background:white;
+	float:left;
+	height:35px;
+	width:35px;
+	cursor: pointer;
+}
+.Rmenu{
+	margin:5px;
+	background:white;
+	float:right;
+	height:35px;
+	width:35px;
+	cursor: pointer;
+}
+#logo-wrap{
+	background:white;
+	margin:0 auto;
+	width:310px;
+	height:100%;
+}
+#logo{
+    margin-left: -40px;
+    width: 380px;
+    height: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+/*     font-family: -webkit-pictograph; */
+    line-height: 40px;
+    color: black;
+    text-decoration: none;
+}
+#logo>a{
+	color:black;
+	text-decoration: none;
+}
+#logo img{
+	width: 270px;
+    height: 56.2px;
+}
+#menuBtn{
+	background-image: url('../images/menu.png');
+	background-size: cover;
+	margin-top: 8.5px;
+    margin-right: 15px;
+}
+#alertBtn{
+	background-image: url('../images/알림.png');
+	background-size: cover;
+	margin-right: 18px;
+    margin-top: 9px;
+}
+#logoutBtn{
+	background-image: url('../images/로그아웃.png');
+	background-size: cover;
+	margin-right: 10px;
+    margin-top: 9px;
+}	
+#logoutBtn:hover{
+	background-image: url('../images/로그아웃호버.png');
+	background-size: cover;
+	margin-right: 10px;
+    margin-top: 9px;
+}
+
+/* 스크롤 */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(91, 90, 255);
+}
+
+::-webkit-scrollbar-track {
+    background-color: #eaeaea;
+    border-left: 1px solid #ccc;
+}
+
+#alertDiv{
+	display:none;
+	position: fixed;
+    width: 250px;
+    height: 400px;
+    overflow: auto;
+    background: #fff;
+	right: 66.3px;
+    top: 50.1px;
+    z-index: 400;
+    border: 1px solid #d4d2d2;
+    font-size: 11.5px;
+    line-height: 26.5px;
+}
+#alertDiv>div{
+	width: 100%;
+    height: 30px;
+    background: #faebd7;
+    cursor: pointer;
+    border-bottom: 1px solid;
+}
+#alertDiv>div:hover{
+	background:#6799FF;
+}
+#alertDiv>div>span{
+	display: block;
+    height: 100%;
+    width: 230px;
+    float: left;
+}
+#alertDiv>div>label{
+	float: right;
+    font-size: 20px;
+    width: 20px;
+    height: 100%;
+    text-align: center;
+}
+#alertDiv>div>label:hover{
+	background:rgba(0,0,0,0.4);    
+}
+#alertCount{
+    position: relative;
+    top: 20px;
+    left: 21px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background: #705151;
+    text-align: center;
+    color: white;
+    font-size: 13.5px;
+}

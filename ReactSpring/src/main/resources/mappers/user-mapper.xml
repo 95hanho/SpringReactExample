@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hoseong.react.user.mapper.UserMapper">
+	<!-- 유저조회 -->
+	<select id="selectUser" resultType="User">
+		select *
+		from user
+	</select>
+	<!-- 유저추가 -->
+	<insert id="insertUser">
+		insert into user
+		values(#{name}, #{nickName}, #{phone}, #{place})
+	</insert>
+	<!-- 유저삭제 -->
+	<delete id="deleteUser">
+		delete from user
+		where name = #{name}
+	</delete>
+	<!-- 유저업데이트 -->
+	<update id="updateUser">
+		update user
+		set nickName = #{nickName},
+		phone = #{phone},
+		place = #{place}
+		where name = #{name}
+	</update>
+	
+</mapper>
