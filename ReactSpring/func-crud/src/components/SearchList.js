@@ -35,7 +35,7 @@ const fnc = useCallback(함수, 변수배열);
 */
 
 export default function SearchList(props) {
-  let [firstUpdateClick, setFupdateClick] = useState(false);
+  // let [firstUpdateClick, setFupdateClick] = useState(false);
   const [state, setState] = useState({
     modifyForm: false,
     name: props.user.name,
@@ -51,14 +51,14 @@ export default function SearchList(props) {
   useLayoutEffect(() => {
     console.log("useLayoutEffect ======>>>");
     // console.log(firstUpdateClick);
-    if (firstUpdateClick) {
-      nickNameRef.current.focus();
-      setFupdateClick(false);
-    }
+    // if (firstUpdateClick) {
+    // nickNameRef.current.focus();
+    // setFupdateClick(false);
+    // }
     return () => {
       console.log("useLayoutEffect return ------------>>");
     };
-  }, [firstUpdateClick]);
+  });
   const userDelete = (name) => {
     // confirm 리액트에서 안먹음 ㅅㅂㅅㅂㅅㅂㅅㅂㅅㅂ
     // const option = Window.confirm("" + name + " 유저를 삭제하시겠습니까?");
@@ -162,6 +162,7 @@ export default function SearchList(props) {
             onChange={setUser}
             ref={nickNameRef}
             onKeyUp={enterPress}
+            autoFocus
           />
         </td>
         <td>
@@ -203,7 +204,7 @@ export default function SearchList(props) {
           <button
             onClick={() => {
               // firstUpdateClick = true;
-              setFupdateClick(true);
+              // setFupdateClick(true);
               setState({
                 ...state,
                 modifyForm: true,

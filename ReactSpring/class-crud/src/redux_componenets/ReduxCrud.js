@@ -3,6 +3,8 @@ import "../components/search.css";
 import api from "../api";
 import { connect } from "react-redux";
 // import { read } from "../redux/userList";
+import Search from "../components/Search";
+import Insert from "../components/Insert";
 
 class ReduxCrud extends React.Component {
   getUsers = () => {
@@ -25,32 +27,37 @@ class ReduxCrud extends React.Component {
     if (userList.length !== 0) {
       return (
         <section>
-          <table>
-            <thead>
-              <tr>
-                <th>이름</th>
-                <th>닉네임</th>
-                <th>전화번호</th>
-                <th>사는 곳</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {userList.map((user) => (
-                <tr key={user.name}>
-                  <td>{user.name}</td>
-                  <td>{user.nickName}</td>
-                  <td>{user.phone}</td>
-                  <td>{user.place}</td>
-                  <td width="100px">
-                    <button>수정</button>
-                    <button>삭제</button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <Search userList={userList} reUserList={this.getUsers} />
+          <hr></hr>
+          <Insert reUserList={this.getUsers} />
         </section>
+        // <section>
+        //   <table>
+        //     <thead>
+        //       <tr>
+        //         <th>이름</th>
+        //         <th>닉네임</th>
+        //         <th>전화번호</th>
+        //         <th>사는 곳</th>
+        //         <th></th>
+        //       </tr>
+        //     </thead>
+        //     <tbody>
+        //       {userList.map((user) => (
+        //         <tr key={user.name}>
+        //           <td>{user.name}</td>
+        //           <td>{user.nickName}</td>
+        //           <td>{user.phone}</td>
+        //           <td>{user.place}</td>
+        //           <td width="100px">
+        //             <button>수정</button>
+        //             <button>삭제</button>
+        //           </td>
+        //         </tr>
+        //       ))}
+        //     </tbody>
+        //   </table>
+        // </section>
       );
     } else {
       console.log("로딩중");

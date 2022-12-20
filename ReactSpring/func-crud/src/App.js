@@ -1,12 +1,15 @@
+import "./App.css";
+import "./test.js";
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
 // import NormalCrud from "./components/NormalCrud";
 import ReduxCrud from "./redux_componenets/ReduxCrud";
+// import $ from "jquery";
 
 function App() {
   const numberState = useState(0);
   const number = numberState[0];
-  const setNumber = numberState[1];
+  // const setNumber = numberState[1];
   // 라이프 사이클 정리
   // 기본모양
   useEffect(function () {
@@ -38,14 +41,17 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {number}
+      {/* {number}
       <button
         onClick={() => {
           setNumber(number + 1);
         }}
       >
         number 증가
-      </button>
+      </button> */}
+      {/* <button id="btn1">show</button> */}
+      {/* <button id="btn2">hide</button> */}
+      {/* <div id="car" alt="자동차"></div> */}
       <div>
         {/* <NormalCrud /> */}
         <ReduxCrud />
